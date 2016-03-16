@@ -1,0 +1,1 @@
+UPDATE user SET userEmail = null WHERE (userID = 1110);

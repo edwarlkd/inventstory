@@ -1,0 +1,1 @@
+DELETE from user WHERE (userID = 1111);
