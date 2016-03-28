@@ -1,6 +1,7 @@
 package com.example.edward.inventstory;
 import android.content.Context;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 
@@ -17,10 +18,18 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class MainActivity extends ActionBarActivity {
     public final static String EXTRA_MESSAGE = "MESSAGE";
     private ListView obj;
     com.example.edward.inventstory.DBHelper mydb;
+
+    private void createDatabase() {
+        SQLiteDatabase database = openOrCreateDatabase("Invent_Story2.db", Context.MODE_PRIVATE, null);
+        database.execSQL("CREATE TABLE IF NOT EXISTS user(name STRING, phone STRING, email STRING, password STRING);");
+        database.close();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

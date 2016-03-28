@@ -13,6 +13,8 @@ package com.example.edward.inventstory;
         import android.database.sqlite.SQLiteOpenHelper;
         import android.database.sqlite.SQLiteDatabase;
 
+
+
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "Invent_Story.db";
@@ -21,6 +23,8 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String USER_TABLE_PASSWORD = "password";
     public static final String USER_TABLE_PHONE = "phone_number";
     public static final String USER_TABLE_EMAIL = "email";
+
+
 
     private HashMap hp;
 
